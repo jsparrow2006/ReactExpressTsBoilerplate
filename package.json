@@ -1,0 +1,17 @@
+{
+  "name": "react-express-typescript-template",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^6.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "start": "concurrently 'yarn --cwd client start' 'yarn --cwd server start'",
+    "build": "yarn --cwd server build && yarn --cwd client build",
+    "install-dependency": "yarn --cwd server install-dependency; yarn --cwd client_OLD install-dependency;"
+  }
+}
